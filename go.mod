@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/hashicorp/go-plugin v1.4.3
 	github.com/stretchr/testify v1.7.0
-	gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112085928-bc0145cbfecb
+	gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112125028-700701b96e30
 )
 
 require (
