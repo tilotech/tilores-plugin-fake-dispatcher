@@ -91,8 +91,8 @@ github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UV
 github.com/stretchr/testify v1.5.1/go.mod h1:5W2xD1RspED5o8YsWQXVCued0rvSQ+mT+I5cxcmMvtA=
 github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
-gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112085928-bc0145cbfecb h1:JD/spSaplNWmyqE5nHaK3CG0I1f7c18+gJMUXaHjMTc=
-gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112085928-bc0145cbfecb/go.mod h1:2XKgyr4x1gCkqffgDnIIBVrNQsiT/zdZcbUGuLmPJTA=
+gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112125028-700701b96e30 h1:kosCgGTz/lY0VR51QunSKFUYD/+Deq0sxoYKLv9Vkbw=
+gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112125028-700701b96e30/go.mod h1:2XKgyr4x1gCkqffgDnIIBVrNQsiT/zdZcbUGuLmPJTA=
 go.opentelemetry.io/proto/otlp v0.7.0/go.mod h1:PqfVotwruBrMGOCsRd/89rSnXhoiJIqeYNgFYFoEGnI=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=

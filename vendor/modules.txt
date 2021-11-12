@@ -41,7 +41,7 @@ github.com/pmezard/go-difflib/difflib
 # github.com/stretchr/testify v1.7.0
 ## explicit; go 1.13
 github.com/stretchr/testify/assert
-# gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112085928-bc0145cbfecb
+# gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112125028-700701b96e30
 ## explicit; go 1.17
 gitlab.com/tilotech/tilores-plugin-api
 gitlab.com/tilotech/tilores-plugin-api/commons
