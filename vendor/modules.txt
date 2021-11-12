@@ -1,3 +1,6 @@
+# github.com/davecgh/go-spew v1.1.1
+## explicit
+github.com/davecgh/go-spew/spew
 # github.com/fatih/color v1.13.0
 ## explicit; go 1.13
 github.com/fatih/color
@@ -32,12 +35,18 @@ github.com/mitchellh/go-testing-interface
 # github.com/oklog/run v1.1.0
 ## explicit; go 1.13
 github.com/oklog/run
-# gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211109115724-582049ee3d0b
+# github.com/pmezard/go-difflib v1.0.0
+## explicit
+github.com/pmezard/go-difflib/difflib
+# github.com/stretchr/testify v1.7.0
+## explicit; go 1.13
+github.com/stretchr/testify/assert
+# gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112085928-bc0145cbfecb
 ## explicit; go 1.17
 gitlab.com/tilotech/tilores-plugin-api
 gitlab.com/tilotech/tilores-plugin-api/commons
 gitlab.com/tilotech/tilores-plugin-api/dispatcher
-# golang.org/x/net v0.0.0-20211108170745-6635138e15ea
+# golang.org/x/net v0.0.0-20211111160137-58aab5ef257a
 ## explicit; go 1.17
 golang.org/x/net/context
 golang.org/x/net/http/httpguts
@@ -46,7 +55,7 @@ golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/sys v0.0.0-20211109065445-02f5c0300f6e
+# golang.org/x/sys v0.0.0-20211111213525-f221eed1c01e
 ## explicit; go 1.17
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
@@ -56,7 +65,7 @@ golang.org/x/text/secure/bidirule
 golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
-# google.golang.org/genproto v0.0.0-20211104193956-4c6863e31247
+# google.golang.org/genproto v0.0.0-20211111162719-482062a4217b
 ## explicit; go 1.11
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.42.0
@@ -143,3 +152,6 @@ google.golang.org/protobuf/types/known/anypb
 google.golang.org/protobuf/types/known/durationpb
 google.golang.org/protobuf/types/known/emptypb
 google.golang.org/protobuf/types/known/timestamppb
+# gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+## explicit
+gopkg.in/yaml.v3
