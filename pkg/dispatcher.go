@@ -2,7 +2,7 @@ package pkg
 
 import (
 	"context"
-
+	"github.com/google/uuid"
 	api "gitlab.com/tilotech/tilores-plugin-api"
 	"gitlab.com/tilotech/tilores-plugin-api/dispatcher"
 )
@@ -27,6 +27,30 @@ func (f *FakeDispatcher) Submit(_ context.Context, records []*api.Record) (*disp
 	return &dispatcher.SubmissionResult{
 		RecordsAdded: len(records),
 	}, nil
+}
+
+// Search finds all matching records and returns a slice of Entity
+//
+// The fake search will return maximum one entity which includes all matching records, unlike the real search.
+// Not all search parameters need to match a record field to consider the record a match, one is enough.
+func (f *FakeDispatcher) Search(_ context.Context, parameters map[string]interface{}) ([]*api.Entity, error) {
+	matchingRecords := make([]*api.Record, 0, f.length)
+	for i := 0; i < f.length; i++ {
+		record := f.records[i]
+		for key, value := range parameters {
+			if record.Data[key] == value {
+				matchingRecords = append(matchingRecords, record)
+				break
+			}
+		}
+	}
+	if len(matchingRecords) == 0 {
+		return []*api.Entity{}, nil
+	}
+	return []*api.Entity{{
+		ID:      uuid.New().String(),
+		Records: matchingRecords,
+	}}, nil
 }
 
 func (f *FakeDispatcher) addRecord(record *api.Record) {

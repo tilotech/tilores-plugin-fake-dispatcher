@@ -13,6 +13,9 @@ github.com/golang/protobuf/ptypes/any
 github.com/golang/protobuf/ptypes/duration
 github.com/golang/protobuf/ptypes/empty
 github.com/golang/protobuf/ptypes/timestamp
+# github.com/google/uuid v1.3.0
+## explicit
+github.com/google/uuid
 # github.com/hashicorp/go-hclog v1.0.0
 ## explicit; go 1.13
 github.com/hashicorp/go-hclog
@@ -41,7 +44,7 @@ github.com/pmezard/go-difflib/difflib
 # github.com/stretchr/testify v1.7.0
 ## explicit; go 1.13
 github.com/stretchr/testify/assert
-# gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112125028-700701b96e30
+# gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112171549-0dc89d3e1dc9
 ## explicit; go 1.17
 gitlab.com/tilotech/tilores-plugin-api
 gitlab.com/tilotech/tilores-plugin-api/commons
@@ -55,7 +58,7 @@ golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/sys v0.0.0-20211111213525-f221eed1c01e
+# golang.org/x/sys v0.0.0-20211112164355-7580c6e521dc
 ## explicit; go 1.17
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
@@ -65,7 +68,7 @@ golang.org/x/text/secure/bidirule
 golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
-# google.golang.org/genproto v0.0.0-20211111162719-482062a4217b
+# google.golang.org/genproto v0.0.0-20211112145013-271947fe86fd
 ## explicit; go 1.11
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.42.0

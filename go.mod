@@ -3,9 +3,10 @@ module gitlab.com/tilotech/tilores-plugin-fake-dispatcher
 go 1.17
 
 require (
+	github.com/google/uuid v1.3.0
 	github.com/hashicorp/go-plugin v1.4.3
 	github.com/stretchr/testify v1.7.0
-	gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112125028-700701b96e30
+	gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112171549-0dc89d3e1dc9
 )
 
 require (
@@ -20,9 +21,9 @@ require (
 	github.com/oklog/run v1.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	golang.org/x/net v0.0.0-20211111160137-58aab5ef257a // indirect
-	golang.org/x/sys v0.0.0-20211111213525-f221eed1c01e // indirect
+	golang.org/x/sys v0.0.0-20211112164355-7580c6e521dc // indirect
 	golang.org/x/text v0.3.7 // indirect
-	google.golang.org/genproto v0.0.0-20211111162719-482062a4217b // indirect
+	google.golang.org/genproto v0.0.0-20211112145013-271947fe86fd // indirect
 	google.golang.org/grpc v1.42.0 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
