@@ -44,12 +44,12 @@ github.com/pmezard/go-difflib/difflib
 # github.com/stretchr/testify v1.7.0
 ## explicit; go 1.13
 github.com/stretchr/testify/assert
-# gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112171549-0dc89d3e1dc9
+# gitlab.com/tilotech/tilores-plugin-api v0.1.0
 ## explicit; go 1.17
 gitlab.com/tilotech/tilores-plugin-api
 gitlab.com/tilotech/tilores-plugin-api/commons
 gitlab.com/tilotech/tilores-plugin-api/dispatcher
-# golang.org/x/net v0.0.0-20211111160137-58aab5ef257a
+# golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2
 ## explicit; go 1.17
 golang.org/x/net/context
 golang.org/x/net/http/httpguts
@@ -58,7 +58,7 @@ golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/sys v0.0.0-20211112164355-7580c6e521dc
+# golang.org/x/sys v0.0.0-20211113001501-0c823b97ae02
 ## explicit; go 1.17
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix

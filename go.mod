@@ -6,7 +6,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/hashicorp/go-plugin v1.4.3
 	github.com/stretchr/testify v1.7.0
-	gitlab.com/tilotech/tilores-plugin-api v0.0.0-20211112171549-0dc89d3e1dc9
+	gitlab.com/tilotech/tilores-plugin-api v0.1.0
 )
 
 require (
@@ -20,8 +20,8 @@ require (
 	github.com/mitchellh/go-testing-interface v1.14.1 // indirect
 	github.com/oklog/run v1.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	golang.org/x/net v0.0.0-20211111160137-58aab5ef257a // indirect
-	golang.org/x/sys v0.0.0-20211112164355-7580c6e521dc // indirect
+	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 // indirect
+	golang.org/x/sys v0.0.0-20211113001501-0c823b97ae02 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/genproto v0.0.0-20211112145013-271947fe86fd // indirect
 	google.golang.org/grpc v1.42.0 // indirect
