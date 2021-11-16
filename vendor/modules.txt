@@ -44,7 +44,7 @@ github.com/pmezard/go-difflib/difflib
 # github.com/stretchr/testify v1.7.0
 ## explicit; go 1.13
 github.com/stretchr/testify/assert
-# gitlab.com/tilotech/tilores-plugin-api v0.1.0
+# gitlab.com/tilotech/tilores-plugin-api v0.1.1
 ## explicit; go 1.17
 gitlab.com/tilotech/tilores-plugin-api
 gitlab.com/tilotech/tilores-plugin-api/commons
@@ -58,7 +58,7 @@ golang.org/x/net/http2/hpack
 golang.org/x/net/idna
 golang.org/x/net/internal/timeseries
 golang.org/x/net/trace
-# golang.org/x/sys v0.0.0-20211113001501-0c823b97ae02
+# golang.org/x/sys v0.0.0-20211116061358-0a5406a5449c
 ## explicit; go 1.17
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
@@ -68,7 +68,7 @@ golang.org/x/text/secure/bidirule
 golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
-# google.golang.org/genproto v0.0.0-20211112145013-271947fe86fd
+# google.golang.org/genproto v0.0.0-20211115160612-a5da7257a6f7
 ## explicit; go 1.11
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.42.0
