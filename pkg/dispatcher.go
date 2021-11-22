@@ -2,9 +2,10 @@ package pkg
 
 import (
 	"context"
+
 	"github.com/google/uuid"
-	api "gitlab.com/tilotech/tilores-plugin-api"
-	"gitlab.com/tilotech/tilores-plugin-api/dispatcher"
+	api "github.com/tilotech/tilores-plugin-api"
+	"github.com/tilotech/tilores-plugin-api/dispatcher"
 )
 
 type FakeDispatcher struct {

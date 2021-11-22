@@ -1,4 +1,4 @@
-module gitlab.com/tilotech/tilores-plugin-fake-dispatcher
+module github.com/tilotech/tilores-plugin-fake-dispatcher
 
 go 1.17
 
@@ -6,7 +6,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/hashicorp/go-plugin v1.4.3
 	github.com/stretchr/testify v1.7.0
-	gitlab.com/tilotech/tilores-plugin-api v0.1.1
+	github.com/tilotech/tilores-plugin-api v0.2.0
 )
 
 require (
