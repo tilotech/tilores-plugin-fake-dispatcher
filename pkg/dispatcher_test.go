@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	api "gitlab.com/tilotech/tilores-plugin-api"
+	api "github.com/tilotech/tilores-plugin-api"
 )
 
 func TestFakeDispatcher(t *testing.T) {

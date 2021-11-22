@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/hashicorp/go-plugin"
-	"gitlab.com/tilotech/tilores-plugin-api/dispatcher"
-	"gitlab.com/tilotech/tilores-plugin-fake-dispatcher/pkg"
+	"github.com/tilotech/tilores-plugin-api/dispatcher"
+	"github.com/tilotech/tilores-plugin-fake-dispatcher/pkg"
 )
 
 func main() {

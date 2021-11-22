@@ -1,7 +1,7 @@
 # Fake Dispatcher Plugin
 
 The fake dispatcher plugin implements the
-[dispatcher plugin interface](https://pkg.go.dev/gitlab.com/tilotech/tilores-plugin-api/dispatcher#Dispatcher).
+[dispatcher plugin interface](https://pkg.go.dev/github.com/tilotech/tilores-plugin-api/dispatcher#Dispatcher).
 
 In contrast to the real (proprietary) TiloRes Core Dispatcher it takes a lot of
 shortcuts and is only intended for testing the GraphQL API functionality.

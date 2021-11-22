@@ -44,11 +44,11 @@ github.com/pmezard/go-difflib/difflib
 # github.com/stretchr/testify v1.7.0
 ## explicit; go 1.13
 github.com/stretchr/testify/assert
-# gitlab.com/tilotech/tilores-plugin-api v0.1.1
+# github.com/tilotech/tilores-plugin-api v0.2.0
 ## explicit; go 1.17
-gitlab.com/tilotech/tilores-plugin-api
-gitlab.com/tilotech/tilores-plugin-api/commons
-gitlab.com/tilotech/tilores-plugin-api/dispatcher
+github.com/tilotech/tilores-plugin-api
+github.com/tilotech/tilores-plugin-api/commons
+github.com/tilotech/tilores-plugin-api/dispatcher
 # golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2
 ## explicit; go 1.17
 golang.org/x/net/context
