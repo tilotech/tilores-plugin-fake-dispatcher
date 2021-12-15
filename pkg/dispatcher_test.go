@@ -13,27 +13,28 @@ func TestFakeDispatcher(t *testing.T) {
 	fixture := &FakeDispatcher{}
 	ctx := context.Background()
 
-	parameters := map[string]interface{}{
+	parameters := api.SearchParameters{
 		"isOdd": true,
 	}
 
-	actualSearchResult, err := fixture.Search(ctx, parameters)
+	actualSearchResult, err := fixture.Search(ctx, &parameters)
 	assert.NoError(t, err)
 	assert.Empty(t, actualSearchResult)
 
-	fixture.Submit(ctx, records(record("1")))
+	_, err = fixture.Submit(ctx, records(record("1")))
+	assert.NoError(t, err)
 	actual, err := fixture.Entity(ctx, "foo-id")
 	assert.NoError(t, err)
 	assert.Equal(t, "foo-id", actual.ID)
 	assert.Equal(t, 1, len(actual.Records))
 	assert.Equal(t, "1", actual.Records[0].ID)
 
-	actualSearchResult, err = fixture.Search(ctx, parameters)
+	actualSearchResult, err = fixture.Search(ctx, &parameters)
 	assert.NoError(t, err)
 	assert.Equal(t, 1, len(actualSearchResult))
 	assert.Equal(t, 1, len(actualSearchResult[0].Records))
 
-	fixture.Submit(ctx, records(
+	_, err = fixture.Submit(ctx, records(
 		record("2"),
 		record("3"),
 		record("4"),
@@ -44,6 +45,7 @@ func TestFakeDispatcher(t *testing.T) {
 		record("9"),
 		record("10"),
 	))
+	assert.NoError(t, err)
 	actual, err = fixture.Entity(ctx, "foo-id")
 	assert.NoError(t, err)
 	assert.Equal(t, 10, len(actual.Records))
@@ -51,12 +53,12 @@ func TestFakeDispatcher(t *testing.T) {
 	assert.Equal(t, "2", actual.Records[1].ID)
 	assert.Equal(t, "10", actual.Records[9].ID)
 
-	actualSearchResult, err = fixture.Search(ctx, parameters)
+	actualSearchResult, err = fixture.Search(ctx, &parameters)
 	assert.NoError(t, err)
 	assert.Equal(t, 1, len(actualSearchResult))
 	assert.Equal(t, 5, len(actualSearchResult[0].Records))
 
-	fixture.Submit(ctx, records(record("11")))
+	_, err = fixture.Submit(ctx, records(record("11")))
 	assert.NoError(t, err)
 	assert.Equal(t, 10, len(actual.Records))
 	assert.Equal(t, "11", actual.Records[0].ID)
