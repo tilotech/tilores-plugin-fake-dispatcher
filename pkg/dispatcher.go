@@ -34,11 +34,11 @@ func (f *FakeDispatcher) Submit(_ context.Context, records []*api.Record) (*disp
 //
 // The fake search will return maximum one entity which includes all matching records, unlike the real search.
 // Not all search parameters need to match a record field to consider the record a match, one is enough.
-func (f *FakeDispatcher) Search(_ context.Context, parameters map[string]interface{}) ([]*api.Entity, error) {
+func (f *FakeDispatcher) Search(_ context.Context, parameters *api.SearchParameters) ([]*api.Entity, error) {
 	matchingRecords := make([]*api.Record, 0, f.length)
 	for i := 0; i < f.length; i++ {
 		record := f.records[i]
-		for key, value := range parameters {
+		for key, value := range *parameters {
 			if record.Data[key] == value {
 				matchingRecords = append(matchingRecords, record)
 				break
