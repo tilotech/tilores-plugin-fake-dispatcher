@@ -5,8 +5,7 @@ all: lint test
 .PHONY: lint
 lint: ## Lint the files
 	@go fmt ${LIST_ALL}
-	@golangci-lint version
-	@golangci-lint run
+	@golangci-lint run --version --timout 3m0s
 
 .PHONY: test
 test: ## Run unit tests
@@ -14,7 +13,7 @@ test: ## Run unit tests
 
 .PHONY: race
 race: ## Run data race detector
-	@go test -race -short -count 1 -v ./...
+	@go test -race -count 1 -v ./...
 
 .PHONY: coverage
 coverage: ## Generate coverage report

@@ -7,6 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	api "github.com/tilotech/tilores-plugin-api"
+	"github.com/tilotech/tilores-plugin-api/dispatcher"
 )
 
 func TestFakeDispatcher(t *testing.T) {
@@ -21,7 +22,7 @@ func TestFakeDispatcher(t *testing.T) {
 	assert.NoError(t, err)
 	assert.Empty(t, actualSearchResult)
 
-	_, err = fixture.Submit(ctx, records(record("1")))
+	_, err = fixture.Submit(ctx, createSubmitInput(record("1")))
 	assert.NoError(t, err)
 	actual, err := fixture.Entity(ctx, "foo-id")
 	assert.NoError(t, err)
@@ -34,7 +35,7 @@ func TestFakeDispatcher(t *testing.T) {
 	assert.Equal(t, 1, len(actualSearchResult))
 	assert.Equal(t, 1, len(actualSearchResult[0].Records))
 
-	_, err = fixture.Submit(ctx, records(
+	_, err = fixture.Submit(ctx, createSubmitInput(
 		record("2"),
 		record("3"),
 		record("4"),
@@ -58,7 +59,7 @@ func TestFakeDispatcher(t *testing.T) {
 	assert.Equal(t, 1, len(actualSearchResult))
 	assert.Equal(t, 5, len(actualSearchResult[0].Records))
 
-	_, err = fixture.Submit(ctx, records(record("11")))
+	_, err = fixture.Submit(ctx, createSubmitInput(record("11")))
 	assert.NoError(t, err)
 	assert.Equal(t, 10, len(actual.Records))
 	assert.Equal(t, "11", actual.Records[0].ID)
@@ -77,6 +78,6 @@ func record(id string) *api.Record {
 	}
 }
 
-func records(records ...*api.Record) []*api.Record {
-	return records
+func createSubmitInput(records ...*api.Record) *dispatcher.SubmitInput {
+	return &dispatcher.SubmitInput{Records: records}
 }
