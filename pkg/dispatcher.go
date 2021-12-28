@@ -2,6 +2,7 @@ package pkg
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/google/uuid"
 	api "github.com/tilotech/tilores-plugin-api"
@@ -21,12 +22,20 @@ func (f *FakeDispatcher) Entity(_ context.Context, id string) (*api.Entity, erro
 	}, nil
 }
 
-func (f *FakeDispatcher) Submit(_ context.Context, records []*api.Record) (*dispatcher.SubmissionResult, error) {
-	for _, record := range records {
+func (f *FakeDispatcher) Disassemble(_ context.Context, _ *dispatcher.DisassembleInput) (*dispatcher.DisassembleOutput, error) {
+	return nil, fmt.Errorf("not implemented for fake dispatcher")
+}
+
+func (f *FakeDispatcher) RemoveConnectionBan(_ context.Context, _ *dispatcher.RemoveConnectionBanInput) error {
+	return fmt.Errorf("not implemented for fake dispatcher")
+}
+
+func (f *FakeDispatcher) Submit(_ context.Context, input *dispatcher.SubmitInput) (*dispatcher.SubmitOutput, error) {
+	for _, record := range input.Records {
 		f.addRecord(record)
 	}
-	return &dispatcher.SubmissionResult{
-		RecordsAdded: len(records),
+	return &dispatcher.SubmitOutput{
+		RecordsAdded: len(input.Records),
 	}, nil
 }
 
