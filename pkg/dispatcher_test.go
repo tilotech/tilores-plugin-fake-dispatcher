@@ -14,26 +14,28 @@ func TestFakeDispatcher(t *testing.T) {
 	fixture := &FakeDispatcher{}
 	ctx := context.Background()
 
-	parameters := api.SearchParameters{
-		"isOdd": true,
+	searchInput := dispatcher.SearchInput{
+		Parameters: &api.SearchParameters{
+			"isOdd": true,
+		},
 	}
 
-	actualSearchResult, err := fixture.Search(ctx, &parameters)
+	actualSearchOutput, err := fixture.Search(ctx, &searchInput)
 	assert.NoError(t, err)
-	assert.Empty(t, actualSearchResult)
+	assert.Empty(t, actualSearchOutput.Entities)
 
 	_, err = fixture.Submit(ctx, createSubmitInput(record("1")))
 	assert.NoError(t, err)
-	actual, err := fixture.Entity(ctx, "foo-id")
+	actual, err := fixture.Entity(ctx, &dispatcher.EntityInput{ID: "foo-id"})
 	assert.NoError(t, err)
-	assert.Equal(t, "foo-id", actual.ID)
-	assert.Equal(t, 1, len(actual.Records))
-	assert.Equal(t, "1", actual.Records[0].ID)
+	assert.Equal(t, "foo-id", actual.Entity.ID)
+	assert.Equal(t, 1, len(actual.Entity.Records))
+	assert.Equal(t, "1", actual.Entity.Records[0].ID)
 
-	actualSearchResult, err = fixture.Search(ctx, &parameters)
+	actualSearchOutput, err = fixture.Search(ctx, &searchInput)
 	assert.NoError(t, err)
-	assert.Equal(t, 1, len(actualSearchResult))
-	assert.Equal(t, 1, len(actualSearchResult[0].Records))
+	assert.Equal(t, 1, len(actualSearchOutput.Entities))
+	assert.Equal(t, 1, len(actualSearchOutput.Entities[0].Records))
 
 	_, err = fixture.Submit(ctx, createSubmitInput(
 		record("2"),
@@ -47,24 +49,24 @@ func TestFakeDispatcher(t *testing.T) {
 		record("10"),
 	))
 	assert.NoError(t, err)
-	actual, err = fixture.Entity(ctx, "foo-id")
+	actual, err = fixture.Entity(ctx, &dispatcher.EntityInput{ID: "foo-id"})
 	assert.NoError(t, err)
-	assert.Equal(t, 10, len(actual.Records))
-	assert.Equal(t, "1", actual.Records[0].ID)
-	assert.Equal(t, "2", actual.Records[1].ID)
-	assert.Equal(t, "10", actual.Records[9].ID)
+	assert.Equal(t, 10, len(actual.Entity.Records))
+	assert.Equal(t, "1", actual.Entity.Records[0].ID)
+	assert.Equal(t, "2", actual.Entity.Records[1].ID)
+	assert.Equal(t, "10", actual.Entity.Records[9].ID)
 
-	actualSearchResult, err = fixture.Search(ctx, &parameters)
+	actualSearchOutput, err = fixture.Search(ctx, &searchInput)
 	assert.NoError(t, err)
-	assert.Equal(t, 1, len(actualSearchResult))
-	assert.Equal(t, 5, len(actualSearchResult[0].Records))
+	assert.Equal(t, 1, len(actualSearchOutput.Entities))
+	assert.Equal(t, 5, len(actualSearchOutput.Entities[0].Records))
 
 	_, err = fixture.Submit(ctx, createSubmitInput(record("11")))
 	assert.NoError(t, err)
-	assert.Equal(t, 10, len(actual.Records))
-	assert.Equal(t, "11", actual.Records[0].ID)
-	assert.Equal(t, "2", actual.Records[1].ID)
-	assert.Equal(t, "10", actual.Records[9].ID)
+	assert.Equal(t, 10, len(actual.Entity.Records))
+	assert.Equal(t, "11", actual.Entity.Records[0].ID)
+	assert.Equal(t, "2", actual.Entity.Records[1].ID)
+	assert.Equal(t, "10", actual.Entity.Records[9].ID)
 }
 
 func record(id string) *api.Record {

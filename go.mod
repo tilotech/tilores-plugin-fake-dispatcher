@@ -6,7 +6,7 @@ require (
 	github.com/google/uuid v1.3.0
 	github.com/hashicorp/go-plugin v1.4.3
 	github.com/stretchr/testify v1.7.0
-	github.com/tilotech/tilores-plugin-api v0.4.0
+	github.com/tilotech/tilores-plugin-api v0.5.0
 )
 
 require (
