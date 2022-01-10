@@ -20,8 +20,11 @@ type FakeDispatcher struct {
 func (f *FakeDispatcher) Entity(_ context.Context, input *dispatcher.EntityInput) (*dispatcher.EntityOutput, error) {
 	return &dispatcher.EntityOutput{
 		Entity: &api.Entity{
-			ID:      input.ID,
-			Records: f.records[0:f.length],
+			ID:         input.ID,
+			Records:    f.records[0:f.length],
+			Edges:      api.Edges{},
+			Duplicates: api.Duplicates{},
+			Hits:       api.Hits{},
 		},
 	}, nil
 }
@@ -69,8 +72,11 @@ func (f *FakeDispatcher) Search(_ context.Context, input *dispatcher.SearchInput
 	return &dispatcher.SearchOutput{
 		Entities: []*api.Entity{
 			{
-				ID:      uuid.New().String(),
-				Records: matchingRecords,
+				ID:         uuid.New().String(),
+				Records:    matchingRecords,
+				Edges:      api.Edges{},
+				Duplicates: api.Duplicates{},
+				Hits:       api.Hits{},
 			},
 		},
 	}, nil

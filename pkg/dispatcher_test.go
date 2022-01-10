@@ -67,6 +67,10 @@ func TestFakeDispatcher(t *testing.T) {
 	assert.Equal(t, "11", actual.Entity.Records[0].ID)
 	assert.Equal(t, "2", actual.Entity.Records[1].ID)
 	assert.Equal(t, "10", actual.Entity.Records[9].ID)
+
+	assert.NotNil(t, actual.Entity.Edges)
+	assert.NotNil(t, actual.Entity.Duplicates)
+	assert.NotNil(t, actual.Entity.Hits)
 }
 
 func record(id string) *api.Record {
