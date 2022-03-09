@@ -5,8 +5,8 @@ go 1.17
 require (
 	github.com/google/uuid v1.3.0
 	github.com/stretchr/testify v1.7.0
-	github.com/tilotech/go-plugin v0.0.0-20220304084544-78b658732ee1
-	github.com/tilotech/tilores-plugin-api v0.6.1-0.20220304091424-8f4fd58901de
+	github.com/tilotech/go-plugin v0.0.0-20220309144552-eaf5e67564b5
+	github.com/tilotech/tilores-plugin-api v0.6.1-0.20220309151101-fb5e97d2ac7b
 )
 
 require (
