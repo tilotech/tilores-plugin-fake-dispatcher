@@ -10,10 +10,10 @@ github.com/pmezard/go-difflib/difflib
 # github.com/stretchr/testify v1.7.0
 ## explicit; go 1.13
 github.com/stretchr/testify/assert
-# github.com/tilotech/go-plugin v0.0.0-20220309144552-eaf5e67564b5
+# github.com/tilotech/go-plugin v0.1.0
 ## explicit; go 1.17
 github.com/tilotech/go-plugin
-# github.com/tilotech/tilores-plugin-api v0.6.1-0.20220309151101-fb5e97d2ac7b
+# github.com/tilotech/tilores-plugin-api v0.7.0
 ## explicit; go 1.17
 github.com/tilotech/tilores-plugin-api
 github.com/tilotech/tilores-plugin-api/dispatcher
