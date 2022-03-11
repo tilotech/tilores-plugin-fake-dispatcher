@@ -1,20 +1,16 @@
 package main
 
 import (
-	"github.com/hashicorp/go-plugin"
+	"fmt"
+
+	"github.com/tilotech/go-plugin"
 	"github.com/tilotech/tilores-plugin-api/dispatcher"
 	"github.com/tilotech/tilores-plugin-fake-dispatcher/pkg"
 )
 
 func main() {
-	var pluginMap = map[string]plugin.Plugin{
-		"dispatcher": &dispatcher.Plugin{
-			Impl: &pkg.FakeDispatcher{},
-		},
+	err := plugin.ListenAndServe(dispatcher.Provide(&pkg.FakeDispatcher{}))
+	if err != nil {
+		fmt.Println(err)
 	}
-
-	plugin.Serve(&plugin.ServeConfig{
-		HandshakeConfig: dispatcher.Handshake,
-		Plugins:         pluginMap,
-	})
 }
